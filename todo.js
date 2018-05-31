@@ -19,6 +19,7 @@ var todoData = [
       console.log("Added a todo");
       console.log(todoData);
       updateList();
+
     }
   });
 
@@ -39,6 +40,9 @@ function updateList () {
       newListItem.appendChild(newContent);
       // add
       todoList.appendChild(newListItem);
+      // clearing out the input field after clicking submit
+      document.getElementById('newInput').value = '';
+
 
     // return
   }

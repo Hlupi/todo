@@ -78,9 +78,10 @@
 
 <body>
   <div>
-    <h1>Your todo's</h1>
+    <h1>TodoList</h1>
 
-    <input type = "text" id = "newInput" placeholder = "I need to do..." value = ""/>
+    <input type = "text" id = "newInput" onkeyup="if(event.keyCode ==13 )
+    document.getElementById('addButton').click()" placeholder = "I need to..." value = ""/>
 
     <button type = "submit" id = "addButton">Add</button>
 
