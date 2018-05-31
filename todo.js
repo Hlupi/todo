@@ -6,7 +6,10 @@ var todoData = [
 
   console.log(todoData);
 
-  var newUl = document.createElement("ul");
+
+
+  var todoList = document.getElementById("todoList");
+  console.log(todoList);
 
   for (var i = 0; i < todoData.length; i++) {
     // console.log(i);
@@ -16,8 +19,10 @@ var todoData = [
     // console.log(newListItem, "this is newListItem");
 
     var newContent = document.createTextNode(todoData[i]);
-    console.log(newContent, "this is new content");
+    // console.log(newContent, "this is new content");
     newListItem.appendChild(newContent);
+    // add
+    todoList.appendChild(newListItem);
   }
 
   // todoData.forEach(function(todo) {
