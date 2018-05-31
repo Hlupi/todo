@@ -14,10 +14,12 @@ var todoData = [
 
   var addButton = document.getElementById('addButton');
   addButton.addEventListener('click', function (event) {
-    todoData.push(userInput.value);
-    console.log("Added a todo");
-    console.log(todoData);
-    updateList();
+    if(userInput.value.length !== 0) {
+      todoData.push(userInput.value);
+      console.log("Added a todo");
+      console.log(todoData);
+      updateList();
+    }
   });
 
   var todoList = document.getElementById("todoList");
@@ -33,10 +35,12 @@ function updateList () {
 
       var newContent = document.createTextNode(todoData[i]);
       // console.log(newContent, "this is new content");
+      }
       newListItem.appendChild(newContent);
       // add
       todoList.appendChild(newListItem);
-    }
+
+    // return
   }
 
 
